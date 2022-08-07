@@ -87,7 +87,7 @@ clickButton.addEventListener("click", () => {
     if (!play) {
         play = true;
         clickButton.innerHTML = "guess";
-        inputText.style.cssText = "display:block;text-transform:lowercase";
+        inputText.style.cssText = "display:block;text-transform:uppercase";
         start.innerHTML = "Guess the Word";
         animalNames = createNewWords();
         randAnimalNames = scrambleWords(animalNames.split("")).join("");
@@ -95,7 +95,7 @@ clickButton.addEventListener("click", () => {
     }
     else {
         let writtenWord = inputText.value;
-        if (writtenWord === animalNames) {
+        if (writtenWord.toLowerCase() === animalNames) {
             play = false;
             start.style.cssText = "font-size:25px;text-transform:uppercase"
             start.innerHTML = `you are absolutely <br>right my friend`;
@@ -115,7 +115,7 @@ clickButton.addEventListener("click", () => {
     if (!play1) {
         play1 = true;
         clickButton1.innerHTML = "guess";
-        inputText1.style.cssText = "display:block;text-transform:lowercase";
+        inputText1.style.cssText = "display:block;text-transform:uppercase";
         start1.innerHTML = "Guess the Word";
         bollywoodNames = bollyNewWords();
         randBollyNames = scrambleBollyWords(bollywoodNames.split("")).join("");
@@ -123,7 +123,7 @@ clickButton.addEventListener("click", () => {
     }
     else {
         let writtenWord1 = inputText1.value;
-        if (writtenWord1 === bollywoodNames) {
+        if (writtenWord1.toLowerCase() === bollywoodNames) {
             play1 = false;
             start1.style.cssText = "font-size:25px;text-transform:uppercase"
             start1.innerHTML = `you are absolutely <br> right my friend`;
@@ -144,7 +144,7 @@ clickButton.addEventListener("click", () => {
     if (!play2) {
         play2 = true;
         clickButton2.innerHTML = "guess";
-        inputText2.style.cssText = "display:block;text-transform:lowercase";
+        inputText2.style.cssText = "display:block;text-transform:uppercase";
         start2.innerHTML = "Guess the Word";
         cricketNames = cricketNewWords();
         randCricketNames = scrambleCricketWords(cricketNames.split("")).join("");
@@ -152,7 +152,7 @@ clickButton.addEventListener("click", () => {
     }
     else {
         let writtenWord2 = inputText2.value;
-        if (writtenWord2 === cricketNames) {
+        if (writtenWord2.toLowerCase() === cricketNames) {
             play2 = false;
             start2.style.cssText = "font-size:25px;text-transform:uppercase"
             start2.innerHTML = `you are absolutely <br> right my friend`;
@@ -171,7 +171,7 @@ clickButton.addEventListener("click", () => {
     if (!play3) {
         play3 = true;
         clickButton3.innerHTML = "guess";
-        inputText3.style.cssText = "display:block;text-transform:lowercase";
+        inputText3.style.cssText = "display:block;text-transform:uppercase";
         start3.innerHTML = "Guess the Word";
         brandNames = brandNewWords();
         randBrandNames = scrambleBrandWords(brandNames.split("")).join("");
@@ -179,7 +179,7 @@ clickButton.addEventListener("click", () => {
     }
     else {
         let writtenWord3 = inputText3.value;
-        if (writtenWord3 === brandNames) {
+        if (writtenWord3.toLowerCase() === brandNames) {
             play3 = false;
             start3.style.cssText = "font-size:25px;text-transform:uppercase"
             start3.innerHTML = `you are absolutely <br> right my friend`;
