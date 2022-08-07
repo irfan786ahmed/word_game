@@ -35,7 +35,7 @@ header {
     font-size: 100px;
 }
 
-.container {
+.container ,.container2{
     margin: 50px auto;
     display: flex;
     flex-wrap: wrap;
@@ -57,7 +57,7 @@ section {
         margin-top: 20px;
     }
 
-    .container {
+    .container,.container2 {
         height: auto;
     }
 
@@ -70,40 +70,36 @@ section {
         text-align: center;
         font-size: 80px;
     }
+    .content,.content3{
+        margin: 190px 0;
+    
+    }
 }
 
-.content {
+.content,.content2 ,.content3,.content4{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 25px 10px #094a82;
     background: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url("https://t3.ftcdn.net/jpg/03/08/71/84/360_F_308718440_Lsad7H4qi33o1ofctkV5CDNv51hiHbMS.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 400px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 25px 10px rgb(82, 19, 228);
+    transition: 0.8s;
 }
+.content:hover,.content2:hover,.content3:hover,.content4:hover{
+    transform: scale(1.1);
 
-.content2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgb(83, 134, 5, 0.479);
-    height: 400px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 25px 10px rgb(82, 19, 225);
-    background: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url("https://t3.ftcdn.net/jpg/03/08/71/84/360_F_308718440_Lsad7H4qi33o1ofctkV5CDNv51hiHbMS.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
 .btn,
-.btn1{
+.btn1,
+.btn2,
+.btn3{
     padding: 2px 15px;
     text-transform: uppercase;
     border-radius: 5px;
@@ -130,7 +126,9 @@ input {
 }
 
 .btn:hover,
-.btn1:hover {
+.btn1:hover,
+.btn2:hover,
+.btn3:hover {
     letter-spacing: 5px;
 }
 
