@@ -13,11 +13,9 @@ const start3 = document.querySelector("#bran");
 let play , play1 , play2 , play3= false
 let animalNames , randAnimalNames , bollywoodNames ,randBollyNames , cricketNames , randCricketNames , brandNames,randBrandNames= "";
 let animals = ['tiger', "lion", "monkey", "deer", "goat", "elephant", "cow", "buffalo", "giraffe", "dino", "dolphin"];
-let bollywood = ["sharukh", "amir", "salman", "katrina", "aftab", "ranveer", "shahid", "irfan", "anil kapoor", "kareena"];
+let bollywood = ["sharukh khan", "amir khan", "salman khan", "katrina kaif", "aftab", "ranveer singh", "shahid kapoor", "irfan khan", "anil kapoor", "kareena kapoor"];
 let cricket = ["sachin","virat","afridi","babar","watson","gayle","steyn","dhoni","rohit","hasan ali","dilshan"];
-let brand = ["zara","mufti","wrangler","rayban","bata","louis vuitton","roadster","lee cooper","adidas","nike","puma"];
-
-
+let brand = ["zara","tata motors","apple","rayban","bata","louis vuitton","samsung","maruti suzuki","air india","nike","puma"];
 
 const createNewWords = () => {
     let randomNumber = Math.floor(Math.random() * animals.length);
@@ -91,7 +89,37 @@ clickButton.addEventListener("click", () => {
         start.innerHTML = "Guess the Word";
         animalNames = createNewWords();
         randAnimalNames = scrambleWords(animalNames.split("")).join("");
-        start.innerHTML=randAnimalNames;
+        start.style.cssText="font-size:25px;text-align:center"
+        if (animalNames === "tiger"){
+            start.innerHTML=`They are wild and <br>get angry too quickly. <br>Don't taunt them even<br> if they're caged. **${randAnimalNames}**`;
+            }
+        else if (animalNames === "lion"){
+                start.innerHTML=`National animal of <br> India <br>**${randAnimalNames}**`;
+            }
+        else if (animalNames === "monkey"){
+                start.innerHTML=`They are known for<br> running and leaping <br>through trees with ease. **${randAnimalNames}**`;
+            }
+        else if (animalNames === "deer"){
+                start.innerHTML=` They are brown in colour<br>, and some of them have<br> marks on their body <br> **${randAnimalNames}**`;
+            }
+        else if (animalNames === "goat"){
+                start.innerHTML=`It is pet animal <br> for every family <br>in villages <br> **${randAnimalNames}**`;
+            }
+        else if (animalNames === "elephant"){
+                start.innerHTML=`They are very big <br>have trunk and two <br>long teeth  <br> **${randAnimalNames}**`;
+            }
+        else if (animalNames === "buffalo"){
+                start.innerHTML=`They are large black<br> domestic animal which <br>gives drinkable milk <br> **${randAnimalNames}**`;
+            }
+        else if (animalNames === "cow"){
+                start.innerHTML=`They are religious  <br> animal white in color  <br> **${randAnimalNames}**`;
+            }
+        else if (animalNames === "giraffe"){
+                start.innerHTML=`It has long neck <br> eat trees leaves   <br> **${randAnimalNames}**`;
+            }
+        else{
+            start.innerHTML=`They are most loving <br> fish and can play <br> with humans<br> **${randAnimalNames}**`
+        }
     }
     else {
         let writtenWord = inputText.value;
@@ -120,28 +148,28 @@ clickButton.addEventListener("click", () => {
         bollywoodNames = bollyNewWords();
         randBollyNames = scrambleBollyWords(bollywoodNames.split("")).join("");
         start1.style.cssText="font-size:25px;text-align:center"
-        if (bollywoodNames === "sharukh"){
+        if (bollywoodNames === "sharukh khan"){
             start1.innerHTML=`He is known as <br> King Khan of Bollywood<br> **${randBollyNames}**`;
             }
-        else if (bollywoodNames === "amir"){
+        else if (bollywoodNames === "amir khan"){
                 start1.innerHTML=`He is a known as <br> Mr. Perfectionist <br>**${randBollyNames}**`;
             }
-        else if (bollywoodNames === "salman"){
+        else if (bollywoodNames === "salman khan"){
                 start1.innerHTML=`He is known as <br> Bhai Jaan of Bollywood <br> **${randBollyNames}**`;
             }
-        else if (bollywoodNames === "katrina"){
+        else if (bollywoodNames === "katrina kaif"){
                 start1.innerHTML=`Wife of Vickey Kaushal <br> **${randBollyNames}**`;
             }
         else if (bollywoodNames === "aftab"){
                 start1.innerHTML=`He is an veteran actor <br> worked in masti series <br> **${randBollyNames}**`;
             }
-        else if (bollywoodNames === "ranveer"){
+        else if (bollywoodNames === "ranveer singh"){
                 start1.innerHTML=`Husband of actress <br>Deepika Padukone  <br> **${randBollyNames}**`;
             }
-        else if (bollywoodNames === "shahid"){
+        else if (bollywoodNames === "shahid kapoor"){
                 start1.innerHTML=`He casted in the <br> movie Kabir Singh <br> **${randBollyNames}**`;
             }
-        else if (bollywoodNames === "irfan"){
+        else if (bollywoodNames === "irfan khan"){
                 start1.innerHTML=`He is an oscar <br> award winner <br> **${randBollyNames}**`;
             }
         else if (bollywoodNames === "anil kapoor"){
@@ -181,7 +209,7 @@ clickButton.addEventListener("click", () => {
         start2.innerHTML = "Guess the Word";
         cricketNames = cricketNewWords();
         randCricketNames = scrambleCricketWords(cricketNames.split("")).join("");
-        start2.style.cssText="font-size:25px;text-align:center"
+        start2.style.cssText="font-size:25px;text-align:center";
         if (cricketNames === "sachin"){
             start2.innerHTML=`He is an Indian Batsmen <br> with 100 Intnl Centuries<br> **${randCricketNames}**`;
             }
@@ -243,7 +271,42 @@ clickButton.addEventListener("click", () => {
         start3.innerHTML = "Guess the Word";
         brandNames = brandNewWords();
         randBrandNames = scrambleBrandWords(brandNames.split("")).join("");
-        start3.innerHTML = randBrandNames;
+        // let brand = ["zara man","tata motors","apple","rayban","bata","louis vuitton","samsung","maruti suzuki","airindia","nike","puma"]
+        start3.style.cssText="font-size:25px;text-align:center";
+        // start3.innerHTML = randBrandNames;
+        if (brandNames === "zara man"){
+            start3.innerHTML=`The most famous clothes<br> brand owner Bernard Arnault<br> **${randBrandNames}**`;
+            }
+        else if (brandNames === "tata motors"){
+                start3.innerHTML=`The car manufacturing <br> company whose owner <br>is Ratan Tata <br>**${randBrandNames}**`;
+            }
+        else if (brandNames === "apple"){
+                start3.innerHTML=`Most trusted gadget  <br> building company whose<br> name is same as fruit <br> **${randBrandNames}**`;
+            }
+        else if (brandNames === "rayban"){
+                start3.innerHTML=`Goggles making company <br> whose first starts from R <br> **${randBrandNames}**`;
+            }
+        else if (brandNames === "bata"){
+                start3.innerHTML=`Indian footwear maker company <br> **${randBrandNames}**`;
+            }
+        else if (brandNames === "louis vuitton"){
+                start3.innerHTML=`World costliest product  <br>making brand which uses real <br>animal skin  <br> **${randBrandNames}**`;
+            }
+        else if (brandNames === "samsung"){
+                start3.innerHTML=`Best android mobile  <br> developing company <br> **${randBrandNames}**`;
+            }
+        else if (brandNames === "maruti suzuki"){
+                start3.innerHTML=`Car manufacturing oldest<br> car is Maruti800 <br> **${randBrandNames}**`;
+            }
+        else if (brandNames === "air india"){
+                start3.innerHTML=`Indian government airlines <br> **${randBrandNames}**`;
+            }
+        else if (brandNames === "nike"){
+                start3.innerHTML=`Most famous shoes making <br> like jordan <br> **${randBrandNames}**`;
+            }
+        else{
+            start3.innerHTML=`Tiger is  the logo <br> shoes makers <br> **${randBrandNames}**`
+        }
     }
     else {
         let writtenWord3 = inputText3.value;
