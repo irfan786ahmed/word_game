@@ -13,7 +13,7 @@ const start3 = document.querySelector("#bran");
 let play , play1 , play2 , play3= false
 let animalNames , randAnimalNames , bollywoodNames ,randBollyNames , cricketNames , randCricketNames , brandNames,randBrandNames= "";
 let animals = ['tiger', "lion", "monkey", "deer", "goat", "elephant", "cow", "buffalo", "giraffe", "dino", "dolphin"];
-let bollywood = ["sharukh", "amir", "salman", "katrina", "aftab", "ranveer", "shahid", "irfan", "tabbu", "kareena"];
+let bollywood = ["sharukh", "amir", "salman", "katrina", "aftab", "ranveer", "shahid", "irfan", "anil kapoor", "kareena"];
 let cricket = ["sachin","virat","afridi","babar","watson","gayle","steyn","dhoni","rohit","hasan ali","dilshan"];
 let brand = ["zara","mufti","wrangler","rayban","bata","louis vuitton","roadster","lee cooper","adidas","nike","puma"];
 
@@ -91,7 +91,7 @@ clickButton.addEventListener("click", () => {
         start.innerHTML = "Guess the Word";
         animalNames = createNewWords();
         randAnimalNames = scrambleWords(animalNames.split("")).join("");
-        start.innerHTML = randAnimalNames;
+        start.innerHTML=randAnimalNames;
     }
     else {
         let writtenWord = inputText.value;
@@ -119,7 +119,40 @@ clickButton.addEventListener("click", () => {
         start1.innerHTML = "Guess the Word";
         bollywoodNames = bollyNewWords();
         randBollyNames = scrambleBollyWords(bollywoodNames.split("")).join("");
-        start1.innerHTML = randBollyNames;
+        start1.style.cssText="font-size:25px;text-align:center"
+        if (bollywoodNames === "sharukh"){
+            start1.innerHTML=`He is known as <br> King Khan of Bollywood<br> **${randBollyNames}**`;
+            }
+        else if (bollywoodNames === "amir"){
+                start1.innerHTML=`He is a known as <br> Mr. Perfectionist <br>**${randBollyNames}**`;
+            }
+        else if (bollywoodNames === "salman"){
+                start1.innerHTML=`He is known as <br> Bhai Jaan of Bollywood <br> **${randBollyNames}**`;
+            }
+        else if (bollywoodNames === "katrina"){
+                start1.innerHTML=`Wife of Vickey Kaushal <br> **${randBollyNames}**`;
+            }
+        else if (bollywoodNames === "aftab"){
+                start1.innerHTML=`He is an veteran actor <br> worked in masti series <br> **${randBollyNames}**`;
+            }
+        else if (bollywoodNames === "ranveer"){
+                start1.innerHTML=`Husband of actress <br>Deepika Padukone  <br> **${randBollyNames}**`;
+            }
+        else if (bollywoodNames === "shahid"){
+                start1.innerHTML=`He casted in the <br> movie Kabir Singh <br> **${randBollyNames}**`;
+            }
+        else if (bollywoodNames === "irfan"){
+                start1.innerHTML=`He is an oscar <br> award winner <br> **${randBollyNames}**`;
+            }
+        else if (bollywoodNames === "anil kapoor"){
+                start1.innerHTML=`He is forever young  <br> **${randBollyNames}**`;
+            }
+        else{
+            start1.innerHTML=`She is wife of <br> actor Saif Ali Khan<br> **${randBollyNames}**`
+        }
+        
+
+        // start1.innerHTML = randBollyNames;
     }
     else {
         let writtenWord1 = inputText1.value;
@@ -148,7 +181,42 @@ clickButton.addEventListener("click", () => {
         start2.innerHTML = "Guess the Word";
         cricketNames = cricketNewWords();
         randCricketNames = scrambleCricketWords(cricketNames.split("")).join("");
-        start2.innerHTML = randCricketNames;
+        start2.style.cssText="font-size:25px;text-align:center"
+        if (cricketNames === "sachin"){
+            start2.innerHTML=`He is an Indian Batsmen <br> with 100 Intnl Centuries<br> **${randCricketNames}**`;
+            }
+        else if (cricketNames === "afridi"){
+                start2.innerHTML=`He is a Pakistan Allrounder <br> who has hit <br>longest six <br>**${randCricketNames}**`;
+            }
+        else if (cricketNames === "virat"){
+                start2.innerHTML=`He is an Indian Batsmen <br> who is husband of<br> Anushka Sharma <br> **${randCricketNames}**`;
+            }
+        else if (cricketNames === "hasan ali"){
+                start2.innerHTML=`He is a Pakistan bowler <br> who drop catches <br> **${randCricketNames}**`;
+            }
+        else if (cricketNames === "watson"){
+                start2.innerHTML=`He is an Australian <br> All-Rounder <br> **${randCricketNames}**`;
+            }
+        else if (cricketNames === "gayle"){
+                start2.innerHTML=`He is an West Indian <br>Opener Universal Boss  <br> **${randCricketNames}**`;
+            }
+        else if (cricketNames === "steyn"){
+                start2.innerHTML=`He is a South African <br> fastest bowler <br> **${randCricketNames}**`;
+            }
+        else if (cricketNames === "babar"){
+                start2.innerHTML=`He is a Pakistani <br> batsmen and Captain <br> **${randCricketNames}**`;
+            }
+        else if (cricketNames === "dhoni"){
+                start2.innerHTML=`He is an Indian wicket <br> keeper bestest among all <br> **${randCricketNames}**`;
+            }
+        else if (cricketNames === "rohit"){
+                start2.innerHTML=`He is an Indian opening <br> batsmen and captain <br> **${randCricketNames}**`;
+            }
+        else{
+            start2.innerHTML=`He is a Srilankan opening <br> batsmen best shot dilscoop <br> **${randCricketNames}**`
+        }
+        
+        // start2.innerHTML = randCricketNames;
     }
     else {
         let writtenWord2 = inputText2.value;
